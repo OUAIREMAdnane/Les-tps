@@ -1,0 +1,83 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Log in </title>
+  <style>
+      .d1{
+        background-color: red;
+        width: 400px;
+        border:2px solid blue;
+        border-right: 0px;
+      }
+      .b1{
+        font-size:20px;
+      }
+      body{
+          font-size:20px;
+      }
+      b{
+        font-size: 40px;
+      }
+      fieldset{
+        width: 600px;
+      }
+  </style>
+</head>
+
+<body>
+
+
+    <form action="page.php" class="form">
+      <fieldset> <label> NOM </label>
+        <input type="text" name="Nom" placeholder="Entrer Nom" class="x1">
+        <br>
+        <label> Password </label>
+        <input type="password" name="Password" placeholder="Entrer Password" class="x2">
+    <br>
+        <label for="n1"> Afficher div</label>
+        oui<input type="radio" name="n1">
+        nom<input type="radio" name="n1">
+         <br>
+        <div class="d1"> <label> Choisir une ville </label>
+      <select class="input1">
+        <option disabled="disabled"> Selectionner Ville </option>
+        <option selected="selected"> Beni Mellal </option>
+        <option> casa </option>
+        <option>Agadir</option>
+        <option> Rabat </option>
+      </select></div>
+      <div>
+        <input type="submit" value="se connecter" class="b1">
+        <input type="reset" value="annuler" class="b1">
+      </div></fieldset>
+        
+       
+      <fieldset>
+        <legend><b>Formulaire</b></legend>
+        <label>Nom :</label>   <input type="text" id="t1" placeholder="Nom " required=""> <br>
+        <label>Residence :</label> <input type="text" id="t2" placeholder="Residence " required=""> <br>
+        <label>Email :</label>  <input type="email" id="t3" placeholder="......@email.com "> <br>
+        <label>Age :</label>  <input type="number" id="t4"> <br>
+        <label>languge parlee :</label>
+        FR<input type="checkbox" value="FR">
+        AR<input type="checkbox" value="AR">
+        ENG<input type="checkbox" value="ENG">
+        <br>
+        <label>profession :</label>
+        <select id="list-option">
+            <option selected="selected">selectionner une option: </option>
+            <option>Developement </option>
+            <option>Resaux </option>
+            
+        
+        </select>
+        <br>
+       
+            <input type="submit" value="Envoyer" class="input"> 
+            <input type="reset" value="interrompre" class="input">
+
+    </fieldset>
+    </form>
+
+  
+
+</body></html>

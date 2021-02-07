@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+     <script>
+           
+    </script>
+    </head>
+<body>
+  
+
+   <script>
+   
+        var T="abcdefghijklmnopqrstwuyz0123456789";
+        T=T.toUpperCase();//majisucule
+
+
+         
+
+        function generer(maxNombre){
+          return Math.floor(Math.random()*maxNombre);
+        }
+        let i=0;
+        let s='';
+        for(i=1;i<=6;i++){
+          var k=generer(T.length);
+          document.write(k+" ");
+          s=s+T[k];
+        }
+        document.write('<br/>Password suggestion: '+s );
+    </script>
+
+     
+</body>
+</html>

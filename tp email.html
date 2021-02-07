@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <style>
+        #d2{
+            width:900px;
+            
+        }
+    </style>
+     <script>
+          function valider(){
+                //utiliser getelementbyid,regexp
+                //ababababab@gmail.fr com
+                var x=document.getElementById("em");
+                var d1=document.getElementById("d1");
+                var ch=x.value;
+                if(ch==""){ 
+                    d1.innerHTML="texte vide";
+                    return;
+                 } 
+                 
+                 var rg=new RegExp('^[^0-9][a-z0-9]{4,}@[a-z]{3,}\.[a-z]{2,3}$','g');
+                
+                 if(rg.test(ch)==false){
+                    d1.innerHTML="email non valide";
+                 }else{
+                    d1.innerHTML="email  valide";
+                 }
+                
+          }
+    </script>
+    </head>
+<body>
+    <div id="d2"> <h1>Exercice </h1>
+  <form>
+      <label>donner un email</label>
+    <input type="text" id="em" />
+    <input type="button" value="Verifier" onclick="valider();" />
+   
+  </form>
+</div>
+<div id="d1" style="width:20%;border:1px solid red">ici message valide/not valide</div>
+
+   <script>
+        
+    </script>
+
+     
+</body>
+</html>

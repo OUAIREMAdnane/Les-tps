@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+     <script>
+          
+ </script>
+    <style>
+        .lignenumeber{clear:both;width:20%; }
+        .number{ width:15%;height:auto;padding:5px;font-size:120%;
+        text-align: center;color:white;font-weight:bold;
+        background-color:rgb(57, 47, 109);margin:2px;
+        float:left;border:1px solid yellow;
+        transition: all 700ms ease-out;}
+        .number:hover{
+            border:2px solid rgb(15, 27, 83);
+            width:13%;
+            color:black;
+            
+            background:linear-gradient(red, orange, yellow, green, blue);
+        }
+        #res{width:19%;background-color: gray;color:white;}
+    </style>
+     
+</head>
+<body>
+   <script>
+       var rg=new RegExp('^Hea+llo$','g');  
+       var ch="hello";
+      var b=rg.test(ch);
+      document.write("ch="+ch);
+      if(b==true){
+        document.write("<br/> chaine est valide selon model");
+      } else{
+        document.write("<br/>chaine est non valide selon modele");
+      }
+    </script>
+
+     
+</body>
+</html>

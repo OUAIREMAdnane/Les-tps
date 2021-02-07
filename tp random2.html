@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+     <script>
+       var timer=null;
+           function generer(n){
+             return Math.floor(Math.random()*n);
+           }
+           function changeCouleur(){
+                let d1=document.querySelector("#d1");
+                let vRed=generer(256);//entre 0 et 255
+                let vGreen=generer(155);//entre 0 et 255
+                let vBlue=generer(100);//entre 0 et 255
+                console.log(vRed +" :"+vGreen+" :"+vBlue);
+
+                d1.style.backgroundColor="rgb("+vRed+","+vGreen+","+vBlue+")";
+           }
+
+         function lancerTimer(){
+          timer= setInterval(changeCouleur,500);
+         }
+          //clearInterval(timer);
+         function stop(){
+            if(timer!=null){
+                     clearInterval(timer);
+                    }
+         }
+    </script>
+    <style>
+        .c1{
+         /* background:linear-gradient(to left,red 20%,blue 20%,green 50%);*/
+         background-color: rgb(0,255,0);
+       
+          height:100px;
+          width:100px;
+        }
+    </style>
+    </head>
+<body>
+  
+<input type="button" value="stopper timer" onclick="stop();"/>
+   <div id="d1" class="c1" onclick="lancerTimer();">
+ 
+   </div>
+
+     
+</body>
+</html>

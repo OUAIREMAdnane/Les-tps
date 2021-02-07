@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d1{
+            height: 270px;
+            border:10px groove red;
+            position:absolute;
+            width: 300px;
+            text-align:center;
+            vertical-align: middle;
+            line-height: 70px;
+        }
+        .d2{
+            height: 270px;
+            border:10px groove green;
+            position: absolute;
+            margin-top: 0px;
+            margin-left:500px;
+            width:500px;
+            
+        }
+        b{
+            font-size: 150%;
+        }
+        select{
+            font-size: 120%;
+        }
+        #d3{
+            text-align: center;
+        }
+        #d4{
+            margin-left: 100px;
+            margin-top:50px;
+        }
+    </style>
+    <script>
+        function valider(){     
+                var d3=document.getElementById("d3");
+                var s1=document.getElementById("s1").value;
+                if(s1=="0")
+                {
+                   d3.innerHTML="<b>Nous n'avons pas de descriptif pour ce choix</b>";
+                   return;
+                }
+                if(s1=="1")
+                {
+                    d3.innerHTML='<img src="plan-rez-de-chaussee.jpg" style="width:300px; height: 250px; display:block;margin:auto">';
+                    return;
+                }
+                if(s1=="2")
+                {
+                    d3.innerHTML='<img src="premier etage.jpg" style="width:300px; height: 250px; display:block;margin:auto">';
+                    return;
+                }
+               
+            }
+    </script>
+</head>
+<body>
+    <marquee style="background-color: rgb(255, 68, 0); border-radius: 10px;" >     
+      <h1>Home sweet home  </h1>
+    </marquee> 
+    <div id="d4">
+        <div class="d1">
+        <label><b>choisissez l'etage desire</b></label><br>
+        <select id="s1" onchange="valider();" style="display: block;margin: auto;">
+            <option value="0">selectionner</option>
+            <option value="1">Rez de chaussee</option>
+            <option value="2">premier etage</option>
+        </select>
+        </div>
+        <div class="d2"  >
+            <div id="d3"></div>
+        </div>
+    </div>
+    
+</body>
+</html>

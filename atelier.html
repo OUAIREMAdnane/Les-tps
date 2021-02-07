@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+         <meta charset="utf-8"/>
+         <link rel="stylesheet" href="styleat.css">
+    </head>
+    <body>
+        <div class="div1">
+            <form action="./" method="post" id="frm">
+                <div class="divnom">
+                    <label for="name"> Nome</label>
+                    <input type="text"  placeholder=" Votre Nome" required id="name">
+                </br> <span id="msg"></span></br>
+                    <label for="pass" >Password</label>
+                    <input type="password" placeholder=" ********" required id="pass">
+                </div>
+                <div class="choix">
+                    <label for="">afficher le div</label>
+                    <label for="oui">oui</label>
+                    <input type="radio" name="choix"  id="oui">
+                    <label for="non">/ non</label>
+                    <input type="radio" name="choix"  id="non">
+                </div>
+                <div id="divsel">
+                    <select  id="selct">
+                        <option value="0">selectioner</option>
+                        <option value="1">Beni Mellal</option>
+                        <option value="2">Casablanca</option>
+                        <option value="3">Agadir</option>
+                        <option value="4">Marrakech</option>
+                    </select>
+                </div>
+                <div class="divsub">
+                   <input type="submit" value="se connecte" id="sub">
+                   <input type="reset" value="annuler">
+            </div>
+            </form>
+        </div>
+        <script src="javascriptat.js"></script>
+    </body>
+</html>

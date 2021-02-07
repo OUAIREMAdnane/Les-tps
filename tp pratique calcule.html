@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calcue</title>
+    <script>
+        function somme(a,b){
+            var s=a+b;
+            return s;
+        }
+        function validcalc(){
+            var x1=document.getElementById("x1");
+            var x2=document.getElementById("x2");
+            var d1=document.getElementById("d1");
+            var sp1=document.getElementById("sp1");
+            if(x1.value==""||x2.value=="")
+            {
+                d1.innerHTML="veuillez remplir valeur"
+                return;
+            }
+            if(isNaN(x1.value)==true||isNaN(x2.value)==true)
+            {
+                d1.innerHTML="donner les chiffres"
+                return;
+            }
+
+            var y=somme(parseFloat(x1.value),parseFloat(x2.value));
+            sp1.innerText="--"+y+"--";
+        }
+    </script>
+    <style>
+        .c1{
+            font-size:25px;
+            color:red;
+            order:1px solid green;
+        }
+        .c2{
+            background-color: red;width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <label>donner nombre1</label><input type="text" id="x1"/>
+    </br>
+    <label>donner nombre2</label><input type="text" id="x2"/>
+    </br>
+    <input type="button" value="calculer" onclick="validcalc()"/>
+    <div id="d1" class="c2"></div>
+    <label>resultat :</label><span id="sp1" class="c1">0.00</span>
+</body>
+</html>
